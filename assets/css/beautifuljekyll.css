@@ -667,7 +667,6 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 }
 .intro-header .page-heading {
   text-align: center;
-  margin: -20rem 0 0;
 }
 .intro-header.big-img .page-heading,
 .intro-header.big-img .post-heading {
@@ -727,7 +726,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
   }
   .intro-header.big-img .page-heading,
   .intro-header.big-img .post-heading {
-    padding: 37rem 0;
+    padding: 16rem 0 36rem;
   }
   .intro-header .page-heading h1 {
     font-size: 5rem;
