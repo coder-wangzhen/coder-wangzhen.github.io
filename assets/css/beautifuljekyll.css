@@ -7,12 +7,17 @@ layout: null
 /* --- General --- */
 
 html {
-  font-size: 100%
+  font-size: 100%;
+  height: 100%;
 }
-
+header {
+  height: 100%;
+}
 body {
   font-family: 'Lora', 'Times New Roman', serif;
   font-size: 1.125rem;
+  height: 100%;
+  overflow: hidden;
   color: {{ site.text-col | default: "#404040" }};
   position: relative;
   background-color: {{ site.page-col | default: "#FFFFFF" }};
@@ -635,6 +640,7 @@ footer .footer-custom-content {
 .intro-header {
   margin: 5rem 0 1.25rem;
   position: relative;
+  height: 100%;
 }
 .intro-header.big-img {
   background: no-repeat center center;
@@ -642,8 +648,8 @@ footer .footer-custom-content {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-top: 3.1875rem; /* The small navbar is 50px tall + 1px border */
-  margin-bottom: 2.1875rem;
+  margin-top: 0; /* The small navbar is 50px tall + 1px border */
+  margin-bottom: 0;
 }
 nav.top-nav-short-permanent ~ header > .intro-header {
   margin-top: 5rem;
@@ -665,8 +671,20 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
   -moz-transition: opacity 1s linear;
   transition: opacity 1s linear;
 }
+.container-md {
+  position: relative;
+  height: 100%;
+}
 .intro-header .page-heading {
   text-align: center;
+}  
+.page-heading {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  right: 0;
+  bottom: 0;
+  margin: auto;/*这行代码是关键*/
 }
 .intro-header.big-img .page-heading,
 .intro-header.big-img .post-heading {
@@ -716,27 +734,6 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
   right: 0;
   bottom: 0;
   display: none;
-}
-@media (min-width: 1200px) {
-  .intro-header {
-    margin-top: 8.125rem;
-  }
-  .intro-header.big-img {
-    margin-top: 0; /* Full navbar is small navbar + 20px padding on each side when expanded */
-  }
-  .intro-header.big-img .page-heading,
-  .intro-header.big-img .post-heading {
-    padding: 16rem 0 36rem;
-  }
-  .intro-header .page-heading h1 {
-    font-size: 5rem;
-  }
-  .intro-header .post-heading h1 {
-    font-size: 3.125rem;
-  }
-  .intro-header.big-img .img-desc {
-    font-size: 0.875rem;
-  }
 }
 
 .header-section.has-img .no-img {
