@@ -681,7 +681,7 @@ nav.top-nav-short-permanent ~ header > .intro-header.big-img {
 .page-heading {
   position: absolute;
   left: 0;
-  top: 10%;
+  top: 1%;
   right: 0;
   bottom: 0;
   margin: auto;/*这行代码是关键*/
